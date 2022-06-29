@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+}
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: center;
+    height: 6rem;
+}
+.navBar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navBar ul li {
+    margin-right: 1.4rem;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.navBar ul li:hover {
+    color: red;
+    font-weight: bold;
+}
+
+#logo {
+    cursor: pointer;
+}
+
+.carousel .carousel-item {
+    height: 50vh;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 50vh;
+}
+
+.indexTextContainer {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    flex-direction: column;
+    height: 38vh;
+}
+.indexTextContainer h1 {
+    font-size: 4rem;
+}
+
+.indexTextContainer h4 {
+    font-size: 1.5rem;
+}
+
+.p {
+    color: red;
+}
