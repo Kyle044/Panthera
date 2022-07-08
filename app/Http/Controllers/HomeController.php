@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
+use App\Models\Expertise;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -22,8 +23,8 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {   
+    {    $expertise = Expertise::All();
         $users = User::all();
-        return view('home',['users'=>$users]);
+        return view('home',['users'=> $users,'expertise'=>$expertise]);
     }
 }

@@ -113,14 +113,15 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach($expertise as $exp)
                 <tr>
-                    <td>1</td>
-                    <td>Doctor Strange</td>
-                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, eum?</td>
-                    <td>2019</td>
-                    <td><a href="" class="deleteBtn">Delete</a></td>
+                    <td>{{$exp->id}}</td>
+                    <td>{{$exp->title}}</td>
+                    <td>{{$exp->description}}</td>
+                    <td>{{$exp->created_at}}</td>
+                    <td><a href="/expertiseDelete/{{$exp->id}}" class="deleteBtn">Delete</a></td>
                 </tr>
-
+                @endforeach
             </tbody>
         </table>
     </div>
@@ -160,33 +161,33 @@
 
     <div class="modalContainer" id="modal">
 
-        <form action="" class="expertiseForm" id="expertiseForm">
+        <form method="post" class="expertiseForm" id="expertiseForm" enctype="multipart/form-data">
             <h5>Expertise Form</h5>
             <label for="">Title</label>
-            <input type="text" name="" id="">
+            <input type="text" name="title" id="">
             <label for="">Description</label>
-            <textarea id="" name="" rows="4" cols="50">
+            <textarea id="" name="description" rows="4" cols="50">
             </textarea>
             <label for="">Upload Picture</label>
-            <input type="file" name="" id="">
+            <input type="file" name="file" id="">
             <div class="btnCont">
                 <button type="submit">Submit</button>
-                <button class="modalCancel">Cancel</button>
+                <div class="modalCancel">Cancel</div>
             </div>
         </form>
 
         <form action="" class="expertiseForm" id="projectForm">
             <h5>Project Form</h5>
             <label for="">Title</label>
-            <input type="text" name="" id="">
+            <input type="text" name="title" id="">
             <label for="">Description</label>
-            <textarea id="" name="" rows="4" cols="50">
+            <textarea id="" name="description" rows="4" cols="50">
                         </textarea>
             <label for="">Upload Picture</label>
-            <input type="file" name="" id="">
+            <input type="file" name="file" id="">
             <div class="btnCont">
                 <button type="submit">Submit</button>
-                <button class="modalCancel">Cancel</button>
+                <div class="modalCancel">Cancel</div>
             </div>
         </form>
 
@@ -238,6 +239,88 @@
             $('#expertiseForm').hide();
             $('#projectForm').hide();
         });
+
+        $('#expertiseForm').submit((e) => {
+            e.preventDefault();
+            var formData = new FormData(e.target);
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                url: "/expertise",
+                type: "POST",
+                data: formData,
+                success: (res) => {
+                    if (res.boolean) {
+                        $.ajax({
+                            url: "/expertiseView",
+                            type: "GET",
+                            data: formData,
+                            success: (res) => {
+                                if (res.boolean) {
+                                    alert(res.msg);
+                                    $('#modal').hide();
+                                    $('#expertiseForm').hide();
+                                    $('#projectForm').hide();
+                                    location.reload();
+                                } else {
+                                    alert(res.msg);
+                                    window.location.href = "/";
+                                }
+                            }, cache: false,
+                            contentType: false,
+                            processData: false
+                        });
+
+
+
+
+
+
+
+                    } else {
+                        alert(res.msg);
+                        window.location.href = "/";
+                    }
+                }, cache: false,
+                contentType: false,
+                processData: false
+            });
+        })
+
+
+
+        $('#projectForm').submit((e) => {
+            e.preventDefault();
+            console.log("Shety");
+            // var formData = new FormData(this);
+            // e.preventDefault();
+            // $.ajaxSetup({
+            //     headers: {
+            //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            //     }
+            // });
+            // $.ajax({
+            //     url: "/expertise",
+            //     type: "POST",
+            //     data: formData,
+            //     success: (res) => {
+            //         if (res.boolean) {
+            //             alert(res.data);
+            //             window.location.href = "/home";
+            //         } else {
+            //             alert(res.data);
+            //             window.location.href = "/";
+            //         }
+            //     }, cache: false,
+            //     contentType: false,
+            //     processData: false
+            // });
+        })
+
 
     });</script>
 @endsection
