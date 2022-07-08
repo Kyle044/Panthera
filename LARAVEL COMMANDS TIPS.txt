@@ -1,0 +1,12 @@
+This will list out the routes
+
+php artisan route:list 
+
+This will create a table in the db
+
+php artisan make:migration create_"NAME"_table
+
+
+This will migrate the db changes
+
+php artisan migrate
