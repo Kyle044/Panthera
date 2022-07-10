@@ -423,8 +423,11 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     transition: 250ms ease;
+    text-align: center;
+    opacity: 0;
 }
 .hoverExpTitle:hover {
+    opacity: 1;
     left: 0;
     border-bottom: 10px solid #c12526;
     background: rgb(253, 253, 253);

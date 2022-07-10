@@ -25,8 +25,13 @@
                 </ul>
                 <h4>Contact Us</h4>
                 <ul class="footer-links">
-                    <li><a href="#">+639494107874</a></li>
-                    <li><a href="mailto:Parisdennismichael@gmail.com">Parisdennismichael@gmail.com</a></li>
+                    <li><a href="#">Blk 11 Lot 23 Phase 11 Carmona Estates Village Carmona city Cavite Philippines
+                            4116</a></li>
+                    <li><a href="#">+63464304404</a></li>
+                    <li><a href="mailto:Info.sales@pantherautomation.io">Info.sales@pantherautomation.io</a></li>
+                    <li><a href="https://www.pantherautomation.io/">https://www.pantherautomation.io/</a></li>
+                    <li><a href="#">Panthera Industrial Automation</a></li>
+
                 </ul>
             </div>
             <div class="col-6 col-md-3">
@@ -42,7 +47,7 @@
                 </ul>
             </div>
         </div>
-        <p>Family owned company with expertise in design and implementation for Industrial process automation and
+        <p>Expertise in design and implementation for Industrial process automation and
             machinery.
         </p>
         <hr>

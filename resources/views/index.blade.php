@@ -62,45 +62,43 @@
         <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3 ">
             <div class="col hoverExpCard">
                 <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;"
-                        src="/img/Machine Vision.jpg">
+                        src="/img/Industry 4.0.jpg">
                     <div class="hoverExpTitle">
-                        <h3>Sample</h3>
+                        <h3>Industry 4.0 Industrial IoT for smart manufacturing</h3>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col hoverExpCard">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="/img/Batch.jpg">
+                    <div class="hoverExpTitle">
+                        <h3>Batch and Continuous Process Automation</h3>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col hoverExpCard">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="/img/SS.jpg">
+                    <div class="hoverExpTitle">
+                        <h3>Industrial Automation Safety Integrated Systems for Rockwell & Siemens Control Systems</h3>
                     </div>
                 </div>
 
             </div>
             <div class="col hoverExpCard">
                 <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;"
-                        src="/img/Machine Vision.jpg">
+                        src="/img/OEM machines.png">
                     <div class="hoverExpTitle">
-                        <h3>Sample</h3>
+                        <h3>OEM Programming System Integrating & Commissioning For Food and Beverage Manufacturing
+                            Machines</h3>
                     </div>
                 </div>
 
             </div>
             <div class="col hoverExpCard">
-                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;"
-                        src="/img/Machine Vision.jpg">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="/img/DI.jpg">
                     <div class="hoverExpTitle">
-                        <h3>Sample</h3>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col hoverExpCard">
-                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;"
-                        src="/img/Machine Vision.jpg">
-                    <div class="hoverExpTitle">
-                        <h3>Sample</h3>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col hoverExpCard">
-                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;"
-                        src="/img/Machine Vision.jpg">
-                    <div class="hoverExpTitle">
-                        <h3>Sample</h3>
+                        <h3>Design, Consultation & Implementation For Automation Projects</h3>
                     </div>
                 </div>
 
@@ -108,9 +106,9 @@
             <div class="col hoverExpCard">
                 <a href="/expertise">
                     <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;"
-                            src="/img/Machine Vision.jpg">
+                            src="/img/Upgrades.jpg">
                         <div class="hoverExpTitle">
-                            <h3>Sample</h3>
+                            <h3>Upgrades of legacy control systems & obsolescence</h3>
                         </div>
                     </div>
                 </a>
@@ -127,7 +125,7 @@
                 <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;"
                         src="/img/Machine Vision.jpg">
                     <div class="py-4">
-                        <h4>Machine Vision</h4>
+                        <h4>Motion Control And Motors</h4>
 
                     </div>
                 </div>
@@ -145,7 +143,7 @@
                 <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;"
                         src="/img/sensor.jpg">
                     <div class="py-4">
-                        <h4>Sensors</h4>
+                        <h4>Sensors & Plant Components</h4>
 
                     </div>
                 </div>
