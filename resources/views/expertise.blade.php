@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Panthera</title>
+    <link rel="icon" type="image/png" href="/img/logoEdit.PNG">
     <link rel="stylesheet" href="expertiseAssets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="expertiseAssets/css/Corporate-Footer-Clean.css">
     <link rel="stylesheet" href="expertiseAssets/css/Navigation-Menu.css">
@@ -12,12 +13,13 @@
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     @include('components.nav')
     @foreach($expertises as $expertise)
-    <div class="container py-4 py-xl-5" style="background: var(--bs-secondary);color: var(--bs-white);">
+    <div class="container py-4 py-xl-5 ">
         <div class="row gy-4 gy-md-0">
             <div class="col-md-6">
                 <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;"

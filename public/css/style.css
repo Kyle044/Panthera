@@ -1,41 +1,132 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Poppins&family=Roboto:wght@300&display=swap");
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Kanit", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
-.navBar {
-    display: flex;
-    justify-content: space-between;
+
+nav {
+    background-color: #222020;
+    height: 80px;
     width: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
-    align-items: center;
-    height: 6rem;
-}
-.navBar ul {
-    display: flex;
-    list-style: none;
+    padding: 0 4rem;
 }
 
-.navBar ul li {
-    margin-right: 1.4rem;
-    cursor: pointer;
-    transition: 0.1s ease;
+.logo {
+    width: auto;
+    height: 4rem;
+    transition: 250ms ease;
+    background-color: white;
+    border-radius: 3px;
+    margin-top: 8px;
+}
+.logo:hover {
+    width: auto;
+    height: 4rem;
+    transition: 250ms ease;
+    background-color: white;
+    border-radius: 3px;
+    margin-top: 8px;
 }
 
-.navBar ul li:hover {
-    color: red;
+nav ul {
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    transform: translateY(0.4rem);
+}
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 7px 13px;
+    border-radius: 3px;
     font-weight: bold;
 }
 
-#logo {
+nav ul li a:hover {
+    background-color: #d5e3ee;
+    transition: 0.5s;
+    color: #240303;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
     cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #c12526;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        z-index: 99;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+    .logo {
+        height: 3rem;
+        margin-top: 15px;
+    }
+    .carimg {
+        min-height: 30vh !important;
+    }
+
+    .carousel-inner {
+        height: 30vh;
+    }
 }
 
 .carousel .carousel-item {
-    height: 50vh;
+    min-height: 50vh;
 }
 
 .carousel-item img {
@@ -63,7 +154,7 @@
 }
 
 .p {
-    color: red;
+    color: #c12526;
 }
 
 .Dash {
@@ -254,8 +345,7 @@
 }
 
 .deleteBtn {
-    background-color: red;
-    padding: 5px;
+    background-color: #c12526;
     border-radius: 3px;
     color: #fff;
     transition: 0.3s ease;
@@ -274,4 +364,74 @@
     justify-content: center;
     border: 2px solid black;
     padding: 10px;
+}
+
+.indexTitle {
+    font-size: 3.4rem;
+    text-align: left;
+    font-weight: 900;
+}
+
+.indexPee {
+    font-size: 1.5rem;
+    text-align: justify;
+    font-weight: 600;
+    font-style: italic;
+    color: #c12526;
+}
+
+.headerTitle {
+    margin-bottom: 1rem;
+}
+.headerTitle::after {
+    content: "";
+    background: gray;
+    display: block;
+    height: 2px;
+}
+#tech {
+    margin-top: 6rem;
+}
+#tech::after {
+    width: 80%;
+    transform: translateX(13rem);
+}
+#inexpertise::after {
+    width: 87%;
+    transform: translateX(8rem);
+}
+.headerTitle h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    padding-top: 10px;
+}
+
+.hoverExpCard {
+    position: relative;
+    overflow: hidden;
+}
+
+.hoverExpTitle {
+    position: absolute;
+    top: 0;
+    left: -1000px;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 250ms ease;
+}
+.hoverExpTitle:hover {
+    left: 0;
+    border-bottom: 10px solid #c12526;
+    background: rgb(253, 253, 253);
+}
+.hoverExpTitle h3 {
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: black;
 }
